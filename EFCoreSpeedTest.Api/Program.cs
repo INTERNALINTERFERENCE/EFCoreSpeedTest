@@ -1,5 +1,6 @@
 using EFCoreSpeedTest.Api.Services;
 using EFCoreSpeedTest.Storage;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,12 @@ var speedDbContextConfiguration = builder.Configuration
     .Get<SpeedDbContextConfiguration>()!;
 
 builder.Services.AddSingleton(speedDbContextConfiguration);
-builder.Services.AddSingleton<ISpeedDbContextFactory, SpeedDbContextFactory>();
+builder.Services.AddDbContextPool<SpeedDbContext>(options =>
+{
+    options.UseNpgsql(
+        speedDbContextConfiguration.ConnectionString,
+        o => o.UseNodaTime());
+});
 builder.Services.AddScoped<IUserAccountService, UserAccountService>();
 
 var app = builder.Build();

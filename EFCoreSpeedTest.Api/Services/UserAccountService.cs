@@ -5,7 +5,7 @@ namespace EFCoreSpeedTest.Api.Services;
 
 public class UserAccountService : BaseService, IUserAccountService
 {
-    public UserAccountService(ISpeedDbContextFactory dbContextFactory) : base(dbContextFactory)
+    public UserAccountService(SpeedDbContext dbContext) : base(dbContext)
     {
     }
 

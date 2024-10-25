@@ -6,10 +6,10 @@ namespace EFCoreSpeedTest.Business.Logic;
 
 public class EntityLogic
 {
-    protected readonly ISpeedDbContextFactory DbContextFactory;
+    protected readonly SpeedDbContext SpeedDbContext;
 
-    public EntityLogic(ISpeedDbContextFactory dbContextFactory)
+    protected EntityLogic(SpeedDbContext dbContext)
     {
-        DbContextFactory = dbContextFactory;
+        SpeedDbContext = dbContext;
     }
 }

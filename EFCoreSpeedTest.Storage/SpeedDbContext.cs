@@ -12,6 +12,8 @@ public class SpeedDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         
+        modelBuilder.HasPostgresExtension("pg_trgm");
+        
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(SpeedDbContext).Assembly);
     }
 }

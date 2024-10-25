@@ -6,14 +6,13 @@ namespace EFCoreSpeedTest.Business.Logic;
 
 public class UserAccountLogic : EntityLogic
 {
-    public UserAccountLogic(ISpeedDbContextFactory dbContextFactory) : base(dbContextFactory)
+    public UserAccountLogic(SpeedDbContext dbContextFactory) : base(dbContextFactory)
     {
     }
 
     public async Task<IEnumerable<UserAccountDto>> Get(ICollection<Guid> ids, CancellationToken cancellationToken)
     {
-        var dbContext = await DbContextFactory.CreateDbContextAsync(cancellationToken);
-        var entities = dbContext.Set<UserAccount>().Where(userAccount => ids.Contains(userAccount.Id));
+        var entities = SpeedDbContext.Set<UserAccount>().Where(userAccount => ids.Contains(userAccount.Id));
 
         var userAccounts = entities.Select(entity => new UserAccountDto
         {
@@ -28,8 +27,6 @@ public class UserAccountLogic : EntityLogic
 
     public async Task Add(IEnumerable<UserAccountDto> userAccounts, CancellationToken cancellationToken)
     {
-        var dbContext = await DbContextFactory.CreateDbContextAsync(cancellationToken);
-
         var userAccountsEntities = userAccounts.Select(dto => new UserAccount
         {
             Id = dto.Id,
@@ -38,7 +35,7 @@ public class UserAccountLogic : EntityLogic
             IpAddress = dto.IpAddress,
         });
         
-        await dbContext.Set<UserAccount>().AddRangeAsync(userAccountsEntities, cancellationToken);
-        await dbContext.SaveChangesAsync(cancellationToken);
+        await SpeedDbContext.Set<UserAccount>().AddRangeAsync(userAccountsEntities, cancellationToken);
+        await SpeedDbContext.SaveChangesAsync(cancellationToken);
     }
 }

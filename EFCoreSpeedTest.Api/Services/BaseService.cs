@@ -5,10 +5,10 @@ namespace EFCoreSpeedTest.Api.Services;
 
 public abstract class BaseService
 {
-    protected UserAccountLogic UserAccountLogic;
+    protected readonly UserAccountLogic UserAccountLogic;
 
-    protected BaseService(ISpeedDbContextFactory dbContextFactory)
+    protected BaseService(SpeedDbContext dbContext)
     {
-        UserAccountLogic = new UserAccountLogic(dbContextFactory);
+        UserAccountLogic = new UserAccountLogic(dbContext);
     }
 }
