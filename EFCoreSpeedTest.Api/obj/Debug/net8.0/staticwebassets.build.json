@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "56gKuYjGR7GuYyHkVSec7WFTdVZ9pOg0PLmOQqyqm7Y=",
+  "Source": "EFCoreSpeedTest.Api",
+  "BasePath": "_content/EFCoreSpeedTest.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

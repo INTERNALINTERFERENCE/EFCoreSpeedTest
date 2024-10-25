@@ -1,0 +1,17 @@
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\bin\Debug\net8.0\EFCoreSpeedTest.Business.deps.json
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\bin\Debug\net8.0\EFCoreSpeedTest.Business.dll
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\bin\Debug\net8.0\EFCoreSpeedTest.Business.pdb
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\bin\Debug\net8.0\EFCoreSpeedTest.Storage.Abstractions.dll
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\bin\Debug\net8.0\EFCoreSpeedTest.Storage.dll
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\bin\Debug\net8.0\EFCoreSpeedTest.Storage.Abstractions.pdb
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\bin\Debug\net8.0\EFCoreSpeedTest.Storage.pdb
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\EFCoreSpeedTest.Business.csproj.AssemblyReference.cache
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\EFCoreSpeedTest.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\EFCoreSpeedTest.Business.AssemblyInfoInputs.cache
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\EFCoreSpeedTest.Business.AssemblyInfo.cs
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\EFCoreSpeedTest.Business.csproj.CoreCompileInputs.cache
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\EFCoreSp.C23AC05B.Up2Date
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\EFCoreSpeedTest.Business.dll
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\refint\EFCoreSpeedTest.Business.dll
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\EFCoreSpeedTest.Business.pdb
+C:\Users\Anton\Desktop\EFCoreSpeedTest\EFCoreSpeedTest.Business\obj\Debug\net8.0\ref\EFCoreSpeedTest.Business.dll
