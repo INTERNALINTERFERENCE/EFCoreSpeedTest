@@ -11,4 +11,9 @@
       <ProjectReference Include="..\EFCoreSpeedTest.Storage\EFCoreSpeedTest.Storage.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Z.EntityFramework.Extensions" Version="8.103.6" />
+      <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="8.103.6" />
+    </ItemGroup>
+
 </Project>

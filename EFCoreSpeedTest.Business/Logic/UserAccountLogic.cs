@@ -35,7 +35,6 @@ public class UserAccountLogic : EntityLogic
             IpAddress = dto.IpAddress,
         });
         
-        await SpeedDbContext.Set<UserAccount>().AddRangeAsync(userAccountsEntities, cancellationToken);
-        await SpeedDbContext.SaveChangesAsync(cancellationToken);
+        await SpeedDbContext.Set<UserAccount>().BulkInsertAsync(userAccountsEntities, cancellationToken);
     }
 }
