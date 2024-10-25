@@ -16,11 +16,9 @@ public class UserAccountService : BaseService, IUserAccountService
         await UserAccountLogic.Add(arguments.Items, cancellationToken);
     }
     
-    public async Task<UserAccountGetResponse> Get(
-        UserAccountGetArguments arguments, 
-        CancellationToken cancellationToken)
+    public async Task<UserAccountGetResponse> Get(UserAccountGetArguments arguments)
     {
-        var userAccounts = await UserAccountLogic.Get(arguments.Ids, cancellationToken);
+        var userAccounts = await UserAccountLogic.Get(arguments.Ids);
         var response = new UserAccountGetResponse(userAccounts);
         
         return response;

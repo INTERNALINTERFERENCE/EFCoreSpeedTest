@@ -6,5 +6,5 @@ public interface IUserAccountService
 {
     Task Add(UserAccountAddArguments arguments, CancellationToken cancellationToken);
     
-    Task<UserAccountGetResponse> Get(UserAccountGetArguments arguments, CancellationToken cancellationToken);
+    Task<UserAccountGetResponse> Get(UserAccountGetArguments arguments);
 }

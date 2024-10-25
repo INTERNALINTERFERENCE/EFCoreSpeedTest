@@ -12,18 +12,17 @@ var speedDbContextConfiguration = builder.Configuration
     .GetRequiredSection(nameof(SpeedDbContextConfiguration))
     .Get<SpeedDbContextConfiguration>()!;
 
-builder.Services.AddSingleton(speedDbContextConfiguration);
 builder.Services.AddDbContextPool<SpeedDbContext>(options =>
 {
     options.UseNpgsql(
         speedDbContextConfiguration.ConnectionString,
         o => o.UseNodaTime());
 });
+
 builder.Services.AddScoped<IUserAccountService, UserAccountService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

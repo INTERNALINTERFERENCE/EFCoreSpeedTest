@@ -4,13 +4,13 @@ using EFCoreSpeedTest.Storage.Entities;
 
 namespace EFCoreSpeedTest.Business.Logic;
 
-public class UserAccountLogic : EntityLogic
+public class UserAccountLogic : EntityLogic<UserAccount>
 {
     public UserAccountLogic(SpeedDbContext dbContextFactory) : base(dbContextFactory)
     {
     }
 
-    public async Task<IEnumerable<UserAccountDto>> Get(ICollection<Guid> ids, CancellationToken cancellationToken)
+    public async Task<IEnumerable<UserAccountDto>> Get(ICollection<Guid> ids)
     {
         var entities = SpeedDbContext.Set<UserAccount>().Where(userAccount => ids.Contains(userAccount.Id));
 

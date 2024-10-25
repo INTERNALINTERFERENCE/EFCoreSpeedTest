@@ -4,7 +4,7 @@ using EFCoreSpeedTest.Storage.Entities;
 
 namespace EFCoreSpeedTest.Business.Logic;
 
-public class EntityLogic
+public class EntityLogic<TEntity> where TEntity : Entity
 {
     protected readonly SpeedDbContext SpeedDbContext;
 

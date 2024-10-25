@@ -20,11 +20,9 @@ public class UserAccountController : ControllerBase
     }
 
     [HttpPost("get")]
-    public async Task<IActionResult> Get(
-        UserAccountGetArguments arguments,
-        CancellationToken cancellationToken)
+    public async Task<IActionResult> Get(UserAccountGetArguments arguments)
     {
-        var result = await _userAccountService.Get(arguments, cancellationToken);
+        var result = await _userAccountService.Get(arguments);
         return Ok(result);
     }
 
