@@ -6,11 +6,11 @@ public class Entity
 {
     public required Guid Id { get; set; }
     
-    public ZonedDateTime CreatedAt { get; protected set; }
+    public LocalDateTime CreatedAt { get; protected set; }
 
     protected Entity()
     {
         Id = Guid.NewGuid();
-        CreatedAt = ZonedDateTime.FromDateTimeOffset(DateTimeOffset.Now);
+        CreatedAt = LocalDateTime.FromDateTime(DateTime.UtcNow);
     }
 }

@@ -4,6 +4,7 @@ using System.Net;
 using EFCoreSpeedTest.Storage;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NodaTime;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -13,9 +14,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EFCoreSpeedTest.Storage.Migrations
 {
     [DbContext(typeof(SpeedDbContext))]
-    partial class SpeedDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241025105143_UseLocalDateTimeInsteadOfZoned")]
+    partial class UseLocalDateTimeInsteadOfZoned
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,6 +49,9 @@ namespace EFCoreSpeedTest.Storage.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.HasIndex("IpAddress");
 

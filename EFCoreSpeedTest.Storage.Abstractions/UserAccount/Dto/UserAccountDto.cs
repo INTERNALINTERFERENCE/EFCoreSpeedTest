@@ -1,4 +1,6 @@
-﻿using System.Net;
+﻿using EFCoreSpeedTest.Storage.Converters;
+using System.Net;
+using System.Text.Json.Serialization;
 
 namespace EFCoreSpeedTest.Storage.Abstractions.UserAccount.Dto;
 
@@ -9,6 +11,7 @@ public class UserAccountDto
     public required string Username { get; set; }
     
     public required string Email { get; set; }
-    
+
+    [JsonConverter(typeof(IPAddressConverter))]
     public required IPAddress IpAddress { get; set; }
 }

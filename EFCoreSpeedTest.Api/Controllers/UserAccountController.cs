@@ -1,7 +1,9 @@
-﻿using System.Net;
+﻿using System.Diagnostics;
+using System.Net;
 using EFCoreSpeedTest.Api.Services;
 using EFCoreSpeedTest.Storage.Abstractions.UserAccount.Commands;
 using EFCoreSpeedTest.Storage.Abstractions.UserAccount.Dto;
+using EFCoreSpeedTest.Storage.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EFCoreSpeedTest.Api.Controllers;
@@ -17,7 +19,7 @@ public class UserAccountController : ControllerBase
         _userAccountService = userAccountService;
     }
 
-    [HttpGet("get")]
+    [HttpPost("get")]
     public async Task<IActionResult> Get(
         UserAccountGetArguments arguments,
         CancellationToken cancellationToken)
@@ -31,21 +33,7 @@ public class UserAccountController : ControllerBase
         UserAccountAddArguments arguments,
         CancellationToken cancellationToken)
     {
-        var fakeArguments = new UserAccountAddArguments()
-        {
-            Items = new List<UserAccountDto>()
-            {
-                new UserAccountDto()
-                {
-                    Id = Guid.NewGuid(),
-                    Email = "test@test.com",
-                    IpAddress = IPAddress.None,
-                    Username = "test"
-                }
-            }
-        };
-        
-        await _userAccountService.Add(fakeArguments, cancellationToken);
-        return Ok(fakeArguments.Items);
+        await _userAccountService.Add(arguments, cancellationToken);
+        return Ok(arguments.Items);
     }
 }

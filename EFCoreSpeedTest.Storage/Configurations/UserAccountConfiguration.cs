@@ -10,17 +10,17 @@ public class UserAccountConfiguration : EntityConfiguration<UserAccount>
     public override void Configure(EntityTypeBuilder<UserAccount> builder)
     {
         base.Configure(builder);
-        
+
         builder.Property(p => p.Username).IsRequired();
         builder.Property(p => p.Username);
-        
+
         builder.Property(p => p.Email).IsRequired();
-        builder.HasIndex(p => p.Email).IsUnique();
-        
-        // builder.Property(p => p.IpAddress)
-        //     .IsRequired()
-        //     .HasColumnType("inet");
-        //
-        // builder.HasIndex(p => p.IpAddress);
+        //builder.HasIndex(p => p.Email).IsUnique();
+
+        builder.Property(p => p.IpAddress)
+            .IsRequired()
+            .HasColumnType("inet");
+
+        builder.HasIndex(p => p.IpAddress);
     }
 }
