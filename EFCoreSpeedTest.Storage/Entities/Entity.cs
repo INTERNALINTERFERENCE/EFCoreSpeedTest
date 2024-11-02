@@ -1,5 +1,4 @@
-﻿using EFCoreSpeedTest.Storage.Extensions;
-using NodaTime;
+﻿using NodaTime;
 
 namespace EFCoreSpeedTest.Storage.Entities;
 
@@ -15,6 +14,6 @@ public class Entity
     {
         Id = Guid.NewGuid();
         CreatedAt = LocalDateTime.FromDateTime(DateTime.UtcNow);
-        CreatedAtTz = SystemClock.Instance.GetTimeZone();
+        CreatedAtTz = DateTimeZoneProviders.Tzdb.GetSystemDefault();
     }
 }

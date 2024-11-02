@@ -1,5 +1,6 @@
 using EFCoreSpeedTest.Api.Queries;
 using EFCoreSpeedTest.Api.Services;
+using EFCoreSpeedTest.Business.Logic;
 using EFCoreSpeedTest.Storage;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +25,7 @@ builder.Services.AddDbContextPool<SpeedDbContext>(options =>
         o => o.UseNodaTime());
 });
 
+builder.Services.AddScoped<UserAccountLogic>();
 builder.Services.AddScoped<IUserAccountService, UserAccountService>();
 
 var app = builder.Build();
