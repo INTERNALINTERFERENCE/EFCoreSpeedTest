@@ -1,9 +1,5 @@
-﻿using System.Diagnostics;
-using System.Net;
-using EFCoreSpeedTest.Api.Services;
+﻿using EFCoreSpeedTest.Api.Services;
 using EFCoreSpeedTest.Storage.Abstractions.UserAccount.Commands;
-using EFCoreSpeedTest.Storage.Abstractions.UserAccount.Dto;
-using EFCoreSpeedTest.Storage.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EFCoreSpeedTest.Api.Controllers;

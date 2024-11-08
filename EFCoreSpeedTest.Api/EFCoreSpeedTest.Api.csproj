@@ -24,6 +24,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\EFCoreSpeedTest.Business\EFCoreSpeedTest.Business.csproj" />
+      <ProjectReference Include="..\EFCoreSpeedTest.Services\EFCoreSpeedTest.Services.csproj" />
     </ItemGroup>
 
 </Project>

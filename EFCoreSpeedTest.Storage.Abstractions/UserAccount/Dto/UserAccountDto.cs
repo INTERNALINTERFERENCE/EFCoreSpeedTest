@@ -12,6 +12,6 @@ public class UserAccountDto
     
     public required string Email { get; set; }
 
-    [JsonConverter(typeof(IPAddressConverter))]
+    [JsonConverter(typeof(IpAddressConverter))]
     public required IPAddress IpAddress { get; set; }
 }

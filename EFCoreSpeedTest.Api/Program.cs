@@ -1,6 +1,8 @@
+using Confluent.Kafka;
 using EFCoreSpeedTest.Api.Queries;
 using EFCoreSpeedTest.Api.Services;
 using EFCoreSpeedTest.Business.Logic;
+using EFCoreSpeedTest.Services;
 using EFCoreSpeedTest.Storage;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +29,13 @@ builder.Services.AddDbContextPool<SpeedDbContext>(options =>
 
 builder.Services.AddScoped<UserAccountLogic>();
 builder.Services.AddScoped<IUserAccountService, UserAccountService>();
+
+builder.Services.AddSingleton(new ProducerConfig
+{
+    BootstrapServers = "127.0.0.1:9092"
+});
+
+builder.Services.AddHostedService<CreateUserService>();
 
 var app = builder.Build();
 

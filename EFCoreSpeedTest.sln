@@ -8,6 +8,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSpeedTest.Business", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSpeedTest.Storage.Abstractions", "EFCoreSpeedTest.Storage.Abstractions\EFCoreSpeedTest.Storage.Abstractions.csproj", "{7AA8F7BF-D658-42F8-8091-62AF9CE4BC87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSpeedTest.Services", "EFCoreSpeedTest.Services\EFCoreSpeedTest.Services.csproj", "{3C25AA8B-82D8-435F-9B2F-F19865C3E89A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{23F8CC95-2DBF-4E43-AB71-3849D222501D}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +37,9 @@ Global
 		{7AA8F7BF-D658-42F8-8091-62AF9CE4BC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA8F7BF-D658-42F8-8091-62AF9CE4BC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AA8F7BF-D658-42F8-8091-62AF9CE4BC87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C25AA8B-82D8-435F-9B2F-F19865C3E89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C25AA8B-82D8-435F-9B2F-F19865C3E89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C25AA8B-82D8-435F-9B2F-F19865C3E89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C25AA8B-82D8-435F-9B2F-F19865C3E89A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
