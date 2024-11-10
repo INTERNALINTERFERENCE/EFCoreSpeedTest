@@ -1,4 +1,5 @@
 ﻿using EFCoreSpeedTest.Business.Exceptions;
+using EFCoreSpeedTest.Common;
 using EFCoreSpeedTest.Storage.Entities;
 
 namespace EFCoreSpeedTest.Business.Extensions;
@@ -14,12 +15,12 @@ public static class EntityExtensions
         return entity;
     }
     
-    public static IEnumerable<T> EntityOrNotFound<T>(this IEnumerable<T> entity, IEnumerable<Guid> ids) 
+    public static IEnumerable<T> EntitiesOrNotFound<T>(this IEnumerable<T> entities, IEnumerable<Guid> ids) 
         where T : Entity
     {
-        if (entity == null)
+        if (entities.IsNullOrEmpty())
             throw new EntityNotFoundException(typeof(T), ids);
         
-        return entity;
+        return entities;
     }
 }

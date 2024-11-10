@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\EFCoreSpeedTest.Common\EFCoreSpeedTest.Common.csproj" />
       <ProjectReference Include="..\EFCoreSpeedTest.Storage.Abstractions\EFCoreSpeedTest.Storage.Abstractions.csproj" />
       <ProjectReference Include="..\EFCoreSpeedTest.Storage\EFCoreSpeedTest.Storage.csproj" />
     </ItemGroup>
